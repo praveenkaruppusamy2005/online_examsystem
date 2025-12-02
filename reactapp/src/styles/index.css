@@ -5,45 +5,41 @@
 }
 
 :root {
-  --primary: #ef233c;
-  --primary-dark: #d11a2f;
-  --primary-light: #f24e62;
-  --secondary: #8d99ae;
-  --secondary-dark: #6b7684;
-  --danger: #ef233c;
-  --danger-dark: #d11a2f;
+  --primary: #6366f1;
+  --primary-dark: #4f46e5;
+  --primary-light: #818cf8;
+  --secondary: #10b981;
+  --secondary-dark: #059669;
+  --danger: #ef4444;
+  --danger-dark: #dc2626;
   --warning: #f59e0b;
   --warning-dark: #d97706;
-  --info: #8d99ae;
-  --info-dark: #6b7684;
-  --light: #edf2f4;
-  --dark: #2b2d42;
-  --gray-50: #edf2f4;
-  --gray-100: #e3e8ea;
-  --gray-200: #d4dade;
-  --gray-300: #b8c1c9;
-  --gray-400: #8d99ae;
-  --gray-500: #6b7684;
-  --gray-600: #545e6f;
-  --gray-700: #3d4555;
-  --gray-800: #2b2d42;
-  --gray-900: #1a1b2e;
+  --info: #3b82f6;
+  --info-dark: #2563eb;
+  --light: #f8fafc;
+  --dark: #1e293b;
+  --gray-50: #f8fafc;
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e1;
+  --gray-400: #94a3b8;
+  --gray-500: #64748b;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  --gray-800: #1e293b;
+  --gray-900: #0f172a;
   --radius: 8px;
-  --shadow-sm: 0 1px 2px 0 rgba(43, 45, 66, 0.05);
-  --shadow: 0 4px 6px -1px rgba(43, 45, 66, 0.1), 0 2px 4px -1px rgba(43, 45, 66, 0.06);
-  --shadow-md: 0 10px 15px -3px rgba(43, 45, 66, 0.1), 0 4px 6px -2px rgba(43, 45, 66, 0.05);
-  --shadow-lg: 0 20px 25px -5px rgba(43, 45, 66, 0.1), 0 10px 10px -5px rgba(43, 45, 66, 0.04);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   line-height: 1.6;
   color: var(--gray-800);
-  background:
-    radial-gradient(circle at top, #edf2f4 0, #e3e8ea 35%, #f5f7f8 70%),
-    linear-gradient(to bottom right, #f5f7f8, #edf2f4);
-  min-height: 100vh;
-  -webkit-font-smoothing: antialiased;
+  background-color: var(--gray-50);
 }
 
 a {
@@ -89,14 +85,6 @@ button {
 .empty-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: var(--gray-400);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.empty-icon svg {
-  opacity: 0.6;
 }
 
 .empty-title {

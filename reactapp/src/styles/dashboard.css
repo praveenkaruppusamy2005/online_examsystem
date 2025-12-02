@@ -115,18 +115,6 @@
 .card-icon {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: var(--primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.card-icon svg {
-  transition: transform 0.3s ease;
-}
-
-.dashboard-card:hover .card-icon svg {
-  transform: scale(1.15) translateY(-4px);
 }
 
 .card-title {

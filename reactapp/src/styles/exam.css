@@ -1,5 +1,5 @@
 .exam-wrapper {
-  background: #edf2f4;
+  background: #f9fafb;
   padding: 2rem;
   font-family: 'Segoe UI', sans-serif;
 }
@@ -15,7 +15,7 @@
 }
 
 .exam-timer {
-  background: #ef233c;
+  background: #f97316;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 6px;
@@ -53,7 +53,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  background: #edf2f4;
+  background: #f1f5f9;
   padding: 0.75rem;
   border-radius: 8px;
   cursor: pointer;
@@ -61,7 +61,7 @@
 }
 
 .option-card:hover {
-  background: #d4dade;
+  background: #e2e8f0;
 }
 
 .exam-controls {
@@ -80,21 +80,21 @@
 }
 
 .button-nav {
-  background: #8d99ae;
-  color: white;
+  background: #e5e7eb;
+  color: #111827;
 }
 
 .button-nav:hover {
-  background: #6b7684;
+  background: #d1d5db;
 }
 
 .button-submit {
-  background: #ef233c;
+  background: #10b981;
   color: white;
 }
 
 .button-submit:hover {
-  background: #d11a2f;
+  background: #059669;
 }
 
 .navigator {
@@ -115,8 +115,8 @@
 .navigator-button {
   width: 40px;
   height: 40px;
-  border: 2px solid #8d99ae;
-  background: #edf2f4;
+  border: 2px solid #d1d5db;
+  background: #f9fafb;
   font-weight: bold;
   border-radius: 8px;
   cursor: pointer;
@@ -124,15 +124,13 @@
 }
 
 .navigator-button.current {
-  border-color: #ef233c;
-  background: #f24e62;
-  color: white;
+  border-color: #3b82f6;
+  background: #bfdbfe;
 }
 
 .navigator-button.answered {
-  background: #8d99ae;
-  border-color: #6b7684;
-  color: white;
+  background: #bbf7d0;
+  border-color: #34d399;
 }
 
 .modal-overlay {

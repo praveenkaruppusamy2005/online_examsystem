@@ -95,13 +95,7 @@ export default function ExamResults() {
 
                 {/* Performance Summary */}
                 <div className="dashboard-card">
-                    <div className="card-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                            <line x1="18" y1="20" x2="18" y2="10"/>
-                            <line x1="12" y1="20" x2="12" y2="4"/>
-                            <line x1="6" y1="20" x2="6" y2="14"/>
-                        </svg>
-                    </div>
+                    <div className="card-icon">📊</div>
                     <h3 className="card-title">Performance Summary</h3>
                     <div className="card-description">
                         <p>You answered <strong>{correctAnswers}</strong> out of <strong>{totalQuestions}</strong> questions correctly.</p>
@@ -176,17 +170,7 @@ export default function ExamResults() {
                                         color: q.isCorrect ? '#22543d' : '#742a2a',
                                         border: `1px solid ${q.isCorrect ? '#9ae6b4' : '#feb2b2'}`
                                     }}>
-                                        {q.isCorrect ? (
-                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', marginRight: '4px', verticalAlign: 'middle'}}>
-                                                <polyline points="20 6 9 17 4 12"/>
-                                            </svg>
-                                        ) : (
-                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', marginRight: '4px', verticalAlign: 'middle'}}>
-                                                <line x1="18" y1="6" x2="6" y2="18"/>
-                                                <line x1="6" y1="6" x2="18" y2="18"/>
-                                            </svg>
-                                        )}
-                                        Correct Answer: {q.correctOption}
+                                        {q.isCorrect ? '✅' : '❌'} Correct Answer: {q.correctOption}
                                     </div>
                                     <div className="action-btn-small" style={{ 
                                         background: '#ebf8ff',
