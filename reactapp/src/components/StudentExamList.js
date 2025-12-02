@@ -133,7 +133,14 @@ export default function StudentExamList() {
                     <div className="list-body">
                         {exams.length === 0 ? (
                             <div className="empty-state">
-                                <div className="empty-icon">📝</div>
+                                <div className="empty-icon">
+                                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                        <polyline points="14 2 14 8 20 8"/>
+                                        <line x1="16" y1="13" x2="8" y2="13"/>
+                                        <line x1="16" y1="17" x2="8" y2="17"/>
+                                    </svg>
+                                </div>
                                 <h3 className="empty-title">No Exams Available</h3>
                                 <p className="empty-description">
                                     There are currently no active exams. Please check back later or contact your teacher.
@@ -161,15 +168,32 @@ export default function StudentExamList() {
                                     
                                     <div className="item-stats">
                                         <div className="stat-item">
-                                            <span className="stat-icon">⏱️</span>
+                                            <span className="stat-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', verticalAlign: 'middle'}}>
+                                                    <circle cx="12" cy="12" r="10"/>
+                                                    <polyline points="12 6 12 12 16 14"/>
+                                                </svg>
+                                            </span>
                                             <span>Duration: {formatDuration(exam.duration)}</span>
                                         </div>
                                         <div className="stat-item">
-                                            <span className="stat-icon">📅</span>
+                                            <span className="stat-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', verticalAlign: 'middle'}}>
+                                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                                    <line x1="16" y1="2" x2="16" y2="6"/>
+                                                    <line x1="8" y1="2" x2="8" y2="6"/>
+                                                    <line x1="3" y1="10" x2="21" y2="10"/>
+                                                </svg>
+                                            </span>
                                             <span>Created: {formatDate(exam.createdAt)}</span>
                                         </div>
                                         <div className="stat-item">
-                                            <span className="stat-icon">👨‍🏫</span>
+                                            <span className="stat-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', verticalAlign: 'middle'}}>
+                                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                                    <circle cx="12" cy="7" r="4"/>
+                                                </svg>
+                                            </span>
                                             <span>By: {exam.createdBy}</span>
                                         </div>
                                     </div>
@@ -181,9 +205,20 @@ export default function StudentExamList() {
                                             disabled={startingExam === exam.examId}
                                         >
                                             {startingExam === exam.examId ? (
-                                                <>⏳ Starting...</>
+                                                <>
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', marginRight: '4px', verticalAlign: 'middle'}}>
+                                                        <circle cx="12" cy="12" r="10"/>
+                                                        <polyline points="12 6 12 12 16 14"/>
+                                                    </svg>
+                                                    Starting...
+                                                </>
                                             ) : (
-                                                <>🚀 Start Exam</>
+                                                <>
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', marginRight: '4px', verticalAlign: 'middle'}}>
+                                                        <polygon points="5 3 19 12 5 21 5 3"/>
+                                                    </svg>
+                                                    Start Exam
+                                                </>
                                             )}
                                         </button>
                                         
@@ -193,7 +228,11 @@ export default function StudentExamList() {
                                             border: '1px solid #9ae6b4',
                                             cursor: 'default'
                                         }}>
-                                            📊 MCQ Format
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', marginRight: '4px', verticalAlign: 'middle'}}>
+                                                <path d="M9 11l3 3L22 4"/>
+                                                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                                            </svg>
+                                            MCQ Format
                                         </div>
                                     </div>
                                 </div>
@@ -213,7 +252,13 @@ export default function StudentExamList() {
                             <div className="loading">Loading results...</div>
                         ) : results.length === 0 ? (
                             <div className="empty-state">
-                                <div className="empty-icon">📊</div>
+                                <div className="empty-icon">
+                                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                        <line x1="18" y1="20" x2="18" y2="10"/>
+                                        <line x1="12" y1="20" x2="12" y2="4"/>
+                                        <line x1="6" y1="20" x2="6" y2="14"/>
+                                    </svg>
+                                </div>
                                 <h3 className="empty-title">No Results Yet</h3>
                                 <p className="empty-description">
                                     You haven't completed any exams yet. Results will appear here after you finish an exam.
@@ -231,7 +276,12 @@ export default function StudentExamList() {
                                     <p className="item-description">{result.description}</p>
                                     <div className="item-stats">
                                         <div className="stat-item">
-                                            <span className="stat-icon">🏆</span>
+                                            <span className="stat-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', verticalAlign: 'middle'}}>
+                                                    <circle cx="12" cy="8" r="7"/>
+                                                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+                                                </svg>
+                                            </span>
                                             <span>Score: {result.score}</span>
                                         </div>
                                         <div className="stat-item">
@@ -256,7 +306,12 @@ export default function StudentExamList() {
                 {/* Instructions */}
                 {exams.length > 0 && (
                     <div className="dashboard-card">
-                        <div className="card-icon">💡</div>
+                        <div className="card-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                <path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z"/>
+                                <path d="M9 21h6"/>
+                            </svg>
+                        </div>
                         <h3 className="card-title">Exam Instructions</h3>
                         <div className="card-description">
                             <ul style={{ textAlign: 'left', paddingLeft: '1.5rem' }}>

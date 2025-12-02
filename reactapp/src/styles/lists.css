@@ -126,6 +126,17 @@
   font-weight: 500;
   transition: all 0.2s;
   border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.action-btn-small svg {
+  transition: transform 0.2s;
+}
+
+.action-btn-small:hover svg {
+  transform: translateX(2px);
 }
 
 .btn-view {

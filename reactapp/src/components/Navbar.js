@@ -96,7 +96,11 @@ const Navbar = () => {
             <div className="navbar-content">
                 {/* Brand/Logo */}
                 <Link to="/" className="navbar-brand">
-                    📚 Online Exam System
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                    </svg>
+                    Online Exam System
                 </Link>
 
                 {/* Desktop Navigation */}
@@ -110,19 +114,33 @@ const Navbar = () => {
                                         to="/teacher/dashboard" 
                                         className={`navbar-link ${isActiveRoute('/teacher/dashboard') ? 'active' : ''}`}
                                     >
-                                        📊 Dashboard
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', marginRight: '6px', verticalAlign: 'middle'}}>
+                                            <rect x="3" y="3" width="7" height="7"/>
+                                            <rect x="14" y="3" width="7" height="7"/>
+                                            <rect x="14" y="14" width="7" height="7"/>
+                                            <rect x="3" y="14" width="7" height="7"/>
+                                        </svg>
+                                        Dashboard
                                     </Link>
                                     <Link 
                                         to="/create-exam" 
                                         className={`navbar-link ${isActiveRoute('/create-exam') ? 'active' : ''}`}
                                     >
-                                        ➕ Create Exam
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', marginRight: '6px', verticalAlign: 'middle'}}>
+                                            <line x1="12" y1="5" x2="12" y2="19"/>
+                                            <line x1="5" y1="12" x2="19" y2="12"/>
+                                        </svg>
+                                        Create Exam
                                     </Link>
                                     <Link 
                                         to="/question-bank" 
                                         className={`navbar-link ${isActiveRoute('/question-bank') ? 'active' : ''}`}
                                     >
-                                        🏦 Question Bank
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', marginRight: '6px', verticalAlign: 'middle'}}>
+                                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                                        </svg>
+                                        Question Bank
                                     </Link>
                                 </>
                             ) : (
@@ -131,19 +149,33 @@ const Navbar = () => {
                                         to="/student/dashboard" 
                                         className={`navbar-link ${isActiveRoute('/student/dashboard') ? 'active' : ''}`}
                                     >
-                                        🏠 Dashboard
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', marginRight: '6px', verticalAlign: 'middle'}}>
+                                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                            <polyline points="9 22 9 12 15 12 15 22"/>
+                                        </svg>
+                                        Dashboard
                                     </Link>
                                     <Link 
                                         to="/student/exams" 
                                         className={`navbar-link ${isActiveRoute('/student/exams') ? 'active' : ''}`}
                                     >
-                                        📝 My Exams
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', marginRight: '6px', verticalAlign: 'middle'}}>
+                                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                            <polyline points="14 2 14 8 20 8"/>
+                                            <line x1="16" y1="13" x2="8" y2="13"/>
+                                            <line x1="16" y1="17" x2="8" y2="17"/>
+                                            <polyline points="10 9 9 9 8 9"/>
+                                        </svg>
+                                        My Exams
                                     </Link>
                                     <Link 
                                         to="/student/results" 
                                         className={`navbar-link ${isActiveRoute('/student/results') ? 'active' : ''}`}
                                     >
-                                        📈 Results
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', marginRight: '6px', verticalAlign: 'middle'}}>
+                                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                                        </svg>
+                                        Results
                                     </Link>
                                 </>
                             )}
@@ -197,17 +229,35 @@ const Navbar = () => {
                                         </div>
                                         <div className="dropdown-divider"></div>
                                         <Link to="/profile" className="dropdown-item">
-                                            👤 My Profile
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', marginRight: '6px', verticalAlign: 'middle'}}>
+                                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                                <circle cx="12" cy="7" r="4"/>
+                                            </svg>
+                                            My Profile
                                         </Link>
                                         <Link to="/settings" className="dropdown-item">
-                                            ⚙️ Settings
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', marginRight: '6px', verticalAlign: 'middle'}}>
+                                                <circle cx="12" cy="12" r="3"/>
+                                                <path d="M12 1v6m0 6v6m5.2-15.6l-3 5.2m-4.4 0l-3-5.2m12.1 3.1l-5.2 3m0 4.4l5.2 3m-3.1-12.1l-3 5.2m-4.4 0l-3-5.2"/>
+                                            </svg>
+                                            Settings
                                         </Link>
                                         <Link to="/help" className="dropdown-item">
-                                            ❓ Help & Support
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', marginRight: '6px', verticalAlign: 'middle'}}>
+                                                <circle cx="12" cy="12" r="10"/>
+                                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                                                <line x1="12" y1="17" x2="12.01" y2="17"/>
+                                            </svg>
+                                            Help & Support
                                         </Link>
                                         <div className="dropdown-divider"></div>
                                         <button onClick={handleLogout} className="dropdown-item logout-btn">
-                                            🚪 Sign Out
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', marginRight: '6px', verticalAlign: 'middle'}}>
+                                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                                                <polyline points="16 17 21 12 16 7"/>
+                                                <line x1="21" y1="12" x2="9" y2="12"/>
+                                            </svg>
+                                            Sign Out
                                         </button>
                                     </div>
                                 )}
@@ -282,21 +332,35 @@ const Navbar = () => {
                                         className="mobile-menu-item"
                                         onClick={() => setIsMobileMenuOpen(false)}
                                     >
-                                        📊 Dashboard
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', marginRight: '6px', verticalAlign: 'middle'}}>
+                                            <rect x="3" y="3" width="7" height="7"/>
+                                            <rect x="14" y="3" width="7" height="7"/>
+                                            <rect x="14" y="14" width="7" height="7"/>
+                                            <rect x="3" y="14" width="7" height="7"/>
+                                        </svg>
+                                        Dashboard
                                     </Link>
                                     <Link 
                                         to="/create-exam" 
                                         className="mobile-menu-item"
                                         onClick={() => setIsMobileMenuOpen(false)}
                                     >
-                                        ➕ Create Exam
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', marginRight: '6px', verticalAlign: 'middle'}}>
+                                            <line x1="12" y1="5" x2="12" y2="19"/>
+                                            <line x1="5" y1="12" x2="19" y2="12"/>
+                                        </svg>
+                                        Create Exam
                                     </Link>
                                     <Link 
                                         to="/question-bank" 
                                         className="mobile-menu-item"
                                         onClick={() => setIsMobileMenuOpen(false)}
                                     >
-                                        🏦 Question Bank
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', marginRight: '6px', verticalAlign: 'middle'}}>
+                                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                                        </svg>
+                                        Question Bank
                                     </Link>
                                 </>
                             ) : (
@@ -306,21 +370,34 @@ const Navbar = () => {
                                         className="mobile-menu-item"
                                         onClick={() => setIsMobileMenuOpen(false)}
                                     >
-                                        🏠 Dashboard
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', marginRight: '6px', verticalAlign: 'middle'}}>
+                                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                            <polyline points="9 22 9 12 15 12 15 22"/>
+                                        </svg>
+                                        Dashboard
                                     </Link>
                                     <Link 
                                         to="/student/exams" 
                                         className="mobile-menu-item"
                                         onClick={() => setIsMobileMenuOpen(false)}
                                     >
-                                        📝 My Exams
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', marginRight: '6px', verticalAlign: 'middle'}}>
+                                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                            <polyline points="14 2 14 8 20 8"/>
+                                            <line x1="16" y1="13" x2="8" y2="13"/>
+                                            <line x1="16" y1="17" x2="8" y2="17"/>
+                                        </svg>
+                                        My Exams
                                     </Link>
                                     <Link 
                                         to="/student/results" 
                                         className="mobile-menu-item"
                                         onClick={() => setIsMobileMenuOpen(false)}
                                     >
-                                        📈 Results
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', marginRight: '6px', verticalAlign: 'middle'}}>
+                                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                                        </svg>
+                                        Results
                                     </Link>
                                 </>
                             )}
@@ -331,20 +408,33 @@ const Navbar = () => {
                                 className="mobile-menu-item"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
-                                👤 My Profile
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', marginRight: '6px', verticalAlign: 'middle'}}>
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                                My Profile
                             </Link>
                             <Link 
                                 to="/settings" 
                                 className="mobile-menu-item"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
-                                ⚙️ Settings
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', marginRight: '6px', verticalAlign: 'middle'}}>
+                                    <circle cx="12" cy="12" r="3"/>
+                                    <path d="M12 1v6m0 6v6m5.2-15.6l-3 5.2m-4.4 0l-3-5.2m12.1 3.1l-5.2 3m0 4.4l5.2 3m-3.1-12.1l-3 5.2m-4.4 0l-3-5.2"/>
+                                </svg>
+                                Settings
                             </Link>
                             <button 
                                 onClick={handleLogout} 
                                 className="mobile-menu-item logout-mobile"
                             >
-                                🚪 Sign Out
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', marginRight: '6px', verticalAlign: 'middle'}}>
+                                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                                    <polyline points="16 17 21 12 16 7"/>
+                                    <line x1="21" y1="12" x2="9" y2="12"/>
+                                </svg>
+                                Sign Out
                             </button>
                         </>
                     ) : (

@@ -105,7 +105,15 @@ export default function TeacherDashboard({ teacherUsername }) {
                 {/* Quick Actions */}
                 <div className="dashboard-cards">
                     <div className="dashboard-card">
-                        <div className="card-icon">📝</div>
+                        <div className="card-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <line x1="12" y1="9" x2="8" y2="9"/>
+                            </svg>
+                        </div>
                         <h3 className="card-title">Create New Exam</h3>
                         <p className="card-description">
                             Create a new exam with multiple choice questions and configure settings.
@@ -116,7 +124,13 @@ export default function TeacherDashboard({ teacherUsername }) {
                     </div>
 
                     <div className="dashboard-card">
-                        <div className="card-icon">📊</div>
+                        <div className="card-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                <line x1="18" y1="20" x2="18" y2="10"/>
+                                <line x1="12" y1="20" x2="12" y2="4"/>
+                                <line x1="6" y1="20" x2="6" y2="14"/>
+                            </svg>
+                        </div>
                         <h3 className="card-title">View Reports</h3>
                         <p className="card-description">
                             Analyze student performance and generate detailed reports.
@@ -127,7 +141,12 @@ export default function TeacherDashboard({ teacherUsername }) {
                     </div>
 
                     <div className="dashboard-card">
-                        <div className="card-icon">🏦</div>
+                        <div className="card-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                            </svg>
+                        </div>
                         <h3 className="card-title">Question Bank</h3>
                         <p className="card-description">
                             Manage and organize your question library for reuse across exams.
@@ -148,7 +167,14 @@ export default function TeacherDashboard({ teacherUsername }) {
                     <div className="list-body">
                         {exams.length === 0 ? (
                             <div className="empty-state">
-                                <div className="empty-icon">📝</div>
+                                <div className="empty-icon">
+                                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                        <polyline points="14 2 14 8 20 8"/>
+                                        <line x1="16" y1="13" x2="8" y2="13"/>
+                                        <line x1="16" y1="17" x2="8" y2="17"/>
+                                    </svg>
+                                </div>
                                 <h3 className="empty-title">No Exams Created Yet</h3>
                                 <p className="empty-description">
                                     Get started by creating your first exam. Add questions and activate it for students.
@@ -191,21 +217,45 @@ export default function TeacherDashboard({ teacherUsername }) {
                                             className="action-btn-small btn-view"
                                             onClick={() => handleViewResults(exam.examId)}
                                         >
-                                            📊 View Results
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', marginRight: '4px', verticalAlign: 'middle'}}>
+                                                <line x1="18" y1="20" x2="18" y2="10"/>
+                                                <line x1="12" y1="20" x2="12" y2="4"/>
+                                                <line x1="6" y1="20" x2="6" y2="14"/>
+                                            </svg>
+                                            View Results
                                         </button>
                                         
                                         <button 
                                             className="action-btn-small btn-edit"
                                             onClick={() => handleEditExam(exam.examId)}
                                         >
-                                            ✏️ Edit
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', marginRight: '4px', verticalAlign: 'middle'}}>
+                                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                                            </svg>
+                                            Edit
                                         </button>
                                         
                                         <button
                                             className={`action-btn-small ${exam.isActive ? 'btn-deactivate' : 'btn-activate'}`}
                                             onClick={() => handleToggleStatus(exam.examId, exam.isActive)}
                                         >
-                                            {exam.isActive ? '⏸️ Deactivate' : '▶️ Activate'}
+                                            {exam.isActive ? (
+                                                <>
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', marginRight: '4px', verticalAlign: 'middle'}}>
+                                                        <rect x="6" y="4" width="4" height="16"/>
+                                                        <rect x="14" y="4" width="4" height="16"/>
+                                                    </svg>
+                                                    Deactivate
+                                                </>
+                                            ) : (
+                                                <>
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'inline', marginRight: '4px', verticalAlign: 'middle'}}>
+                                                        <polygon points="5 3 19 12 5 21 5 3"/>
+                                                    </svg>
+                                                    Activate
+                                                </>
+                                            )}
                                         </button>
                                     </div>
                                 </div>
