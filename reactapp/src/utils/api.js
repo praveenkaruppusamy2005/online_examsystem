@@ -5,7 +5,7 @@ const API_BASE = 'https://online-examsystem.onrender.com/api';
 // Create axios instance with default config
 const apiClient = axios.create({
     baseURL: API_BASE,
-    timeout: 10000,
+    timeout: 60000,
 });
 
 // Request interceptor to add auth token
